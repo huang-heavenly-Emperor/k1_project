@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #B31B1B;
+  --text-color: #222;
+  --link-color: #0076BB;
+  --background-color: #fff;
+  --border-color: #e5e5e5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.main-container {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  display: flex;
+  /* 添加 flex 布局 */
+  flex-direction: column;
+  /* 使子元素垂直排列 */
+  justify-content: space-between;
+}
+
+
+.researcher-profile {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+
+}
+
+.profile-image img {
+  width: 100%;
+
+  border-radius: 4px;
+}
+
+.profile-content {
+  display: block;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.research-intro,
+.current-positions,
+.contact-info {
+  line-height: 1.8;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .researcher-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 200px;
+  }
+}
